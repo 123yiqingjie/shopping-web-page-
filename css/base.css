@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding:0;
+    /* css3盒子模型 */
+    box-sizing: border-box;
+}
+em,
+i {
+    font-style: normal;
+}
+li {
+    list-style: none;
+}
+img {
+    border:0;
+    vertical-align: middle;
+}
+button {
+    cursor: pointer;
+}
+a {
+    color:#666;
+    text-decoration: none;
+}
+a:hover {
+    color: #c81623;
+}
+button,
+input {
+    border:0px;
+    outline: none;
+    font:12px/1.5 Microsoft YaHei , Heiti SC, tahoma, arial,Hiragino Sans GB , "\5B8B\4F53",sans-serif;
+}
+body{
+    -webkit-font-somoothing: antialiased;
+    color: #666;
+   font:12px/1.5 Microsoft YaHei , Heiti SC, tahoma, arial,Hiragino Sans GB , "\5B8B\4F53",sans-serif;
+
+}
+.hide,
+.none {
+    display: none;
+}
+.clearfix::after{
+    visibility: hidden;
+    clear:both;
+    display: block;
+    content: '';
+    height:0;
+}
+.clearfix {
+    *zoom:1;
+}

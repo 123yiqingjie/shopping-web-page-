@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div>用户名：<input type="text" id="userName"/><span id="a1"></span></div>
+    <div>密码：<input type="password" id="pwd" /><span id="a2"></span></div>
+    <div>确认密码：<input type="password" id="affirmPwd" /><span id="a3"></span></div>
+    <div>邮箱：<input type="text" id="mailbox" /><span id="a4"></span></div>
+    <div>手机号：<input type="text" id="cellphone" /><span id="a5"></span></div>
+    <div>身份证号：<input type="text" id="identityCard" /><span id="a6"></span></div>
+    <div>地址：<input type="text" id="address" /><span id="a7"></span></div>
+    <div><input type="button" value="校验" onclick="f()"/></div>
+<script type="text/javascript">
+    function f() {
+        var userName = document.getElementById("userName").value;
+        var pwd = document.getElementById("pwd").value;
+        var affirmPwd = document.getElementById("affirmPwd").value;
+        var mailbox = document.getElementById("mailbox").value;
+        var cellphone = document.getElementById("cellphone").value;
+        var identityCard = document.getElementById("identityCard").value;
+        var address = document.getElementById("address").value;
+        //判断用户名
+        var verify1 = /^[A-Z]{1}[A-Za-z_]{5,19}$/
+        var result1 = verify1.test(userName.trim());
+        if (result1 && userName != ""){
+            document.getElementById("a1").innerHTML = "√";
+            document.getElementById("a1").style.color = "green";
+        }else {
+            document.getElementById("a1").innerHTML = "×";
+            document.getElementById("a1").style.color = "red";
+        }
+        //判断密码
+        var verify2 = /^[A-Z]{1}[A-Za-z0-9]{7,14}/;
+        var result2 = verify2.test(pwd.trim());
+        if (result2 && pwd != ""){
+            document.getElementById("a2").innerHTML = "√";
+            document.getElementById("a2").style.color = "green";
+        }else {
+            document.getElementById("a2").innerHTML = "×";
+            document.getElementById("a2").style.color = "red";
+        }
+        //判断确认密码是否一致
+        if(pwd == affirmPwd){
+            document.getElementById("a3").innerHTML = "√";
+            document.getElementById("a3").style.color = "green";
+        }else{
+            document.getElementById("a3").innerHTML = "×";
+            document.getElementById("a3").style.color = "red";
+        }
+        //判断邮箱格式
+        var verify4 = /\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/;
+        var result4 = verify4.test(mailbox.trim());
+        if (result4 && mailbox != ""){
+            document.getElementById("a4").innerHTML = "√";
+            document.getElementById("a4").style.color = "green";
+        }else {
+            document.getElementById("a4").innerHTML = "×";
+            document.getElementById("a4").style.color = "red";
+        }
+        //判断手机号格式
+        var verify5 =/0?(13|14|15|18|17|19)[0-9]{9}/;
+        var result5 = verify5.test(cellphone.trim());
+        if (result5 && cellphone != ""){
+            document.getElementById("a5").innerHTML = "√";
+            document.getElementById("a5").style.color = "green";
+        }else {
+            document.getElementById("a5").innerHTML = "×";
+            document.getElementById("a5").style.color = "red";
+        }
+        //判断身份证格式
+        var verify6 = /^[1-9]{1}[0-9]{17}$|[1-9]{1}[0-9]{16}(X|x)$/;
+        var result6 = verify6.test(identityCard.trim());
+        if (result6 && identityCard != ""){
+            document.getElementById("a6").innerHTML = "√";
+            document.getElementById("a6").style.color = "green";
+        }else {
+            document.getElementById("a6").innerHTML = "×";
+            document.getElementById("a6").style.color = "red";
+        }
+        //判断地址格式
+        var verify7 = /^[1-9]{1}[0-9]{17}$|[1-9]{1}[0-9]{16}(X|x)$/;
+        var result7 = verify7.test(address.trim());
+        if (result7 && address != ""){
+            document.getElementById("a7").innerHTML = "√";
+            document.getElementById("a7").style.color = "green";
+        }else {
+            document.getElementById("a7").innerHTML = "×";
+            document.getElementById("a7").style.color = "red";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+.w {
+    width:1200px;
+    margin:0 auto;
+}
+header {
+    height: 84px;
+    overflow: hidden;
+    border-bottom: 2px solid #c81523;
+}
+.logo {
+    padding-top:18px;
+}
+.logo  img {  
+    height: 61px;
+}
+.registerarea {
+    height: 450px;
+    border:1px solid #ccc;
+    margin: top 20px; 
+}
+.registerarea h3 {
+    height: 42px;
+    border-bottom: 1px solid #ccc;
+    background-color: #ececec;
+    line-height: 42px;
+    padding: 0 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.login {
+    float: right;
+    font-size: 14px;
+}
+.style_red {
+    color: red;
+}
+.reg_form {
+    width: 600px;
+    margin:50px auto 0;
+}
+.reg_form ul li {
+    margin-bottom: 20px;
+}
+.reg_form ul li label {
+    display: inline-block;
+    width: 88px;
+    text-align: right; 
+}
+.reg_form ul li .inp {
+    width: 242px;
+    height: 37px;
+    border: 1px solid #ccc;
+}
+.safe {
+padding-left: 200px;
+}
+.btn {
+    width: 200px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    background-color: #c81623;
+    font-size: 14px;
+    color: #fff;
+    margin: 30px 0 0 70px;
+}
+.links {
+    margin-bottom: 15px;
+}
+.links a {
+    margin:0 3px;
+}
+.mod-copyright {
+    text-align: center;
+    padding-top: 20px;
+}
+.copyright {
+ line-height: 20px;
+}
+ 
+
+ 
